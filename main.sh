@@ -6,3 +6,4 @@ PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
 echo "请使用v2rayNg客户端扫描下方二维码："
 qrencode -t ansiutf8 < /tmp/link
 xray run -c /tmp/config.yaml
+
