@@ -28,6 +28,11 @@ outbounds:
       domainStrategy: UseIPv4
   - tag: dns-out
     protocol: dns
+  - protocol: blackhole
+    settings:
+      response:
+        type: http
+    tag: block
 routing:
   domainStrategy: AsIs
   rules:
@@ -35,3 +40,13 @@ routing:
       outboundTag: dns-out
       network: udp
       port: 53
+    - type: field
+      domain:
+        - 'geosite:category-ads-all'
+        - 'geosite:cn'
+      outboundTag: block
+    - type: field
+      outboundTag: block
+      ip:
+        - 'geoip:cn'
+        - 'geoip:private'
