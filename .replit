@@ -1,6 +1,10 @@
 run = ["bash", "main.sh"]
 
 entrypoint = "main.sh"
+hidden = [".gitignore", ".envhash"]
 
 [nix]
 channel = "nixos-22.11"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
