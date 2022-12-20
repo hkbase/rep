@@ -41,10 +41,10 @@ routing:
       network: udp
       port: 53
     - type: field
+      outboundTag: block    
       domain:
         - 'geosite:category-ads-all'
         - 'geosite:cn'
-      outboundTag: block
     - type: field
       outboundTag: block
       ip:
