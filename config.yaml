@@ -2,8 +2,7 @@ log:
   loglevel: none
 dns:
   servers:
-    - address: 127.0.0.11
-      port: 53
+  - https+local://8.8.8.8/dns-query
 inbounds:
   - port: 443
     protocol: trojan
