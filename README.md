@@ -10,6 +10,6 @@
 ## 2、配置
 点击左侧Secrets，在右侧选项卡分别设置 PASSWORD（Trojan协议密码）和 WSPATH（Websocket路径）变量。
 
-image
+![image](https://user-images.githubusercontent.com/9875710/208567680-553cbc41-55dc-4e3f-adc2-495e744e407c.png)
 
 然后点击网页上方 Run，稍等片刻即部署完成。
