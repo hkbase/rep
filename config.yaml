@@ -4,10 +4,8 @@ dns:
   servers:
     - address: 127.0.0.11
       port: 53
-  queryStrategy: UseIPv4
 inbounds:
-  - listen: 0.0.0.0
-    port: 443
+  - port: 443
     protocol: trojan
     settings:
       clients:
@@ -25,10 +23,8 @@ inbounds:
         - tls
       routeOnly: true
 outbounds:
-  - protocol: freedom
-    tag: direct
-    settings:
-      domainStrategy: UseIPv4
+  - tag: direct
+    protocol: freedom
     streamSettings:
       sockopt:
         tcpcongestion: bbr
