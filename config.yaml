@@ -1,0 +1,35 @@
+log:
+  loglevel: none
+dns:
+  servers:
+    - 'https+local://8.8.8.8/dns-query'
+inbounds:
+  - port: 8080
+    protocol: trojan
+    settings:
+      clients:
+        - password: PASSWORD
+    streamSettings:
+      network: ws
+      wsSettings:
+        path: WSPATH
+    sniffing:
+      enabled: true
+      destOverride:
+        - http
+        - tls
+      routeOnly: true
+outbounds:
+  - protocol: freedom
+    tag: direct
+    settings:
+      domainStrategy: UseIPv4
+  - tag: dns-out
+    protocol: dns
+routing:
+  domainStrategy: AsIs
+  rules:
+    - type: field
+      outboundTag: dns-out
+      network: udp
+      port: 53
