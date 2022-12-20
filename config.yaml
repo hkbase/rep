@@ -1,9 +1,8 @@
 log:
-  loglevel: warning
+  loglevel: none
 dns:
   servers:
-    - address: 127.0.0.11
-      port: 53
+    - 'https+local://8.8.8.8/dns-query'
 inbounds:
   - port: 443
     protocol: trojan
@@ -21,10 +20,11 @@ inbounds:
       destOverride:
         - http
         - tls
-      routeOnly: true
 outbounds:
   - tag: direct
     protocol: freedom
+    settings:
+      domainStrategy: UseIPv4    
     streamSettings:
       sockopt:
         tcpcongestion: bbr
@@ -36,7 +36,7 @@ outbounds:
         type: http
     tag: block
 routing:
-  domainStrategy: AsIs
+  domainStrategy: IPIfNonMatch
   rules:
     - type: field
       outboundTag: dns-out
