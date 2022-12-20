@@ -7,5 +7,6 @@
         pkgs.bashInteractive
         pkgs.xray
         pkgs.dig
+        pkgs.dnsproxy
     ];
 }
