@@ -6,4 +6,4 @@ PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
 echo "请使用v2rayNg扫描下方二维码："
 qrencode -t ansiutf8 < /tmp/link
 dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 --ratelimit=0 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled &
-xray run -c /tmp/config.yaml &
+xray run -c /tmp/config.yaml
