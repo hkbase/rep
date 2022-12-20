@@ -1,4 +1,4 @@
-## 部署
+## 1、部署
  
 前往 replit.com 注册账户，然后点击下方按钮
 
@@ -7,3 +7,9 @@
 </a>
 
 再点击 Import from Github。
+## 2、配置
+点击左侧Secrets，在右侧选项卡分别设置 PASSWORD（Trojan协议密码）和 WSPATH（Websocket路径）变量。
+
+image
+
+然后点击网页上方 Run，稍等片刻即部署完成。
