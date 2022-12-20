@@ -2,7 +2,8 @@ log:
   loglevel: none
 dns:
   servers:
-    - 'https+local://8.8.8.8/dns-query'
+    - address: 127.0.0.1
+      port: 53
 inbounds:
   - port: 443
     protocol: trojan
@@ -24,17 +25,17 @@ outbounds:
   - tag: direct
     protocol: freedom
     settings:
-      domainStrategy: UseIPv4    
+      domainStrategy: UseIPv4
     streamSettings:
       sockopt:
         tcpcongestion: bbr
   - tag: dns-out
     protocol: dns
-  - protocol: blackhole
+  - tag: block
+    protocol: blackhole
     settings:
       response:
         type: http
-    tag: block
 routing:
   domainStrategy: IPIfNonMatch
   rules:
