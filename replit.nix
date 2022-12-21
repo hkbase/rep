@@ -8,5 +8,6 @@
         pkgs.xray
         pkgs.dig
         pkgs.dnsproxy
+        pkgs.dogdns
     ];
 }
