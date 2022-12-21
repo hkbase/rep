@@ -5,7 +5,7 @@ PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
 echo trojan://"${PASSWORD}@${REPL_SLUG}.${REPL_OWNER}.repl.co:443?security=tls&type=ws&path=${PATH_IN_LINK}#Replit" >/tmp/link
 echo "请使用v2rayNg扫描下方二维码："
 qrencode -t ansiutf8 < /tmp/link
-wget -O /tmp/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
-wget -O /tmp/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
-dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 --ratelimit=0 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled &
+wget -qO /tmp/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat 
+wget -qO /tmp/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 -r 2000 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled -o /dev/null &
 xray run -c /tmp/config.yaml
