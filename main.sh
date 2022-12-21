@@ -3,7 +3,7 @@ cp -f ./config.yaml /tmp/config.yaml
 sed -i "s|PASSWORD|${PASSWORD}|g;s|WSPATH|${WSPATH}|g" /tmp/config.yaml
 PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
 echo trojan://"${PASSWORD}@${REPL_SLUG}.${REPL_OWNER}.repl.co:443?security=tls&type=ws&path=${PATH_IN_LINK}#Replit" >/tmp/link
-echo "请使用v2rayNg扫描下方二维码："
+echo "请使用v2rayNG扫描下方二维码："
 qrencode -t ansiutf8 < /tmp/link
 wget -qO /tmp/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat 
 wget -qO /tmp/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
