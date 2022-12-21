@@ -13,4 +13,4 @@
 ![image](https://user-images.githubusercontent.com/9875710/208567784-2828142f-1214-4d9c-9379-635b80645c33.png)
 
 
-然后点击网页上方 Run，稍等片刻即部署完成。
+然后点击网页上方 Run，稍等片刻即部署完成，默认已开启bbr加速。
