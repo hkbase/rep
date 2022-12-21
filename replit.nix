@@ -1,6 +1,6 @@
 { pkgs }: {
     deps = [
-        pkgs.bash
+        pkgs.htop
         pkgs.qrencode.bin
         pkgs.jq.bin
         pkgs.busybox
