@@ -1,8 +1,8 @@
 log:
-  access: '/tmp/access.log'
-  error: '/tmp/error.log'
-  loglevel: warning
-  dnslog: true
+  access: /tmp/access.log
+  error: /tmp/error.log
+  loglevel: none
+  dnslog: false
 dns:
   servers:
     - address: 127.0.0.1
@@ -43,6 +43,7 @@ outbounds:
         type: http
 routing:
   domainStrategy: IPIfNonMatch
+  domainMatcher: hybrid
   rules:
     - type: field
       outboundTag: dns-out
