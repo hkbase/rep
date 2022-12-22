@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cp -f ./config.yaml /tmp/config.yaml
 sed -i "s|PASSWORD|${PASSWORD}|g;s|WSPATH|${WSPATH}|g" /tmp/config.yaml
 PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
