@@ -13,8 +13,6 @@ inbounds:
     settings:
       clients:
         - password: PASSWORD
-      fallbacks:
-        - dest: 3000
     streamSettings:
       network: ws
       wsSettings:
