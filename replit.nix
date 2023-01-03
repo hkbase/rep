@@ -10,5 +10,6 @@
         pkgs.htop
         pkgs.dnsproxy
         pkgs.dogdns
+        pkgs.lighttpd
     ];
 }
