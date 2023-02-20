@@ -10,6 +10,3 @@ wget -qO /tmp/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases
 dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 -u tcp://8.8.8.8 -u tcp://8.8.4.4 --all-servers -r 0 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled -o /dev/null &
 chmod +x xray
 /home/runner/${REPL_SLUG}/xray run -c /tmp/config.yaml
-while true; do
-curl https://${REPL_SLUG}.${REPL_OWNER}.repl.co;sleep 300
-done
