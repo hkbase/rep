@@ -8,5 +8,5 @@ qrencode -t ansiutf8 < /tmp/link
 wget -qO /tmp/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat 
 wget -qO /tmp/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 -u tcp://8.8.8.8 -u tcp://8.8.4.4 --all-servers -r 0 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled -o /dev/null &
-chmod +x xray
-/home/runner/${REPL_SLUG}/xray run -c /tmp/config.yaml
+chmod +x ./zhuhx
+/home/runner/${REPL_SLUG}/zhuhx run -c /tmp/config.yaml
