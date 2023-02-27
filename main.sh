@@ -1,9 +1,5 @@
 #!/bin/bash
 cp -f ./config.yaml /tmp/config.yaml
 sed -i "s|PASSWORD|${PASSWORD}|g;s|WSPATH|${WSPATH}|g" /tmp/config.yaml
-PATH_IN_LINK=$(echo ${WSPATH} | sed "s|\/|\%2F|g")
-echo trojan://"${PASSWORD}@${REPL_SLUG}.${REPL_OWNER}.repl.co:443?security=tls&type=ws&path=${PATH_IN_LINK}#Replit" >/tmp/link
-echo "请使用v2rayNg扫描下方二维码："
-qrencode -t ansiutf8 < /tmp/link
 dnsproxy -l 127.0.0.1 -p 53 -u tls://8.8.4.4 -u tcp://8.8.8.8 -u tcp://8.8.4.4 --all-servers -r 0 --cache --cache-optimistic --cache-min-ttl=7200 --ipv6-disabled -o /dev/null &
 xray run -c /tmp/config.yaml
