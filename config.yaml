@@ -19,11 +19,6 @@ inbounds:
         path: WSPATH
       sockopt:
         tcpcongestion: bbr
-    sniffing:
-      enabled: true
-      destOverride:
-        - http
-        - tls
 outbounds:
   - tag: direct
     protocol: freedom
