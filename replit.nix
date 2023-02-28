@@ -1,7 +1,5 @@
 { pkgs }: {
     deps = [
-        pkgs.bash
-        pkgs.jq.bin
         pkgs.busybox
         pkgs.bashInteractive
         pkgs.xray
