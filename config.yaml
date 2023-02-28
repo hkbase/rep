@@ -29,11 +29,6 @@ outbounds:
         tcpcongestion: bbr
   - tag: dns-out
     protocol: dns
-  - tag: block
-    protocol: blackhole
-    settings:
-      response:
-        type: http
 routing:
   domainStrategy: IPIfNonMatch
   domainMatcher: hybrid
