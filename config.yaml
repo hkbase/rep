@@ -31,7 +31,7 @@ outbounds:
   - tag: dns-out
     protocol: dns
 routing:
-  domainStrategy: IPIfNonMatch
+  domainStrategy: AsIs
   domainMatcher: hybrid
   rules:
     - type: field
