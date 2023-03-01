@@ -4,5 +4,5 @@ sed -i "s|PASSWORD|${PASSWORD}|g;s|WSPATH|${WSPATH}|g" /tmp/config.yaml
 xray run -c /tmp/config.yaml &
 while true; do
 curl https://${REPL_SLUG}.${REPL_OWNER}.repl.co -s -o /dev/null
-sleep 100
+sleep 90
 done
