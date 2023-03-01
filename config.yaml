@@ -1,13 +1,10 @@
 log:
-  access: /tmp/access.log
-  error: /tmp/error.log
   loglevel: none
   dnslog: false
 dns:
   servers:
     - address: 'tcp+local://8.8.8.8:53'
     - address: 'tcp+local://8.8.4.4:53'
-    - address: 127.0.0.11
 inbounds:
   - port: 443
     protocol: trojan
