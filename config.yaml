@@ -1,6 +1,6 @@
 log:
-  loglevel: none
-  dnslog: false
+  loglevel: warning
+  dnslog: true
 dns:
   servers:
     - address: 'tcp+local://8.8.8.8:53'
