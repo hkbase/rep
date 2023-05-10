@@ -1,10 +1,10 @@
 log:
-  loglevel: warning
+  loglevel: info
   dnslog: true
 dns:
   servers:
-    - address: 'tcp+local://8.8.8.8:53'
-    - address: 'tcp+local://8.8.4.4:53'
+    - address: 'tcp+local://1.1.1.1:53'
+    - address: 'tcp+local://1.0.0.1:53'
 inbounds:
   - listen: 0.0.0.0
     port: 443
@@ -16,21 +16,15 @@ inbounds:
       network: ws
       wsSettings:
         path: WSPATH
-      sockopt:
-        tcpcongestion: bbr
 outbounds:
   - tag: direct
     protocol: freedom
     settings:
       domainStrategy: UseIPv4
-    streamSettings:
-      sockopt:
-        tcpcongestion: bbr
   - tag: dns-out
     protocol: dns
 routing:
   domainStrategy: AsIs
-  domainMatcher: hybrid
   rules:
     - type: field
       outboundTag: dns-out
