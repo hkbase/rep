@@ -3,8 +3,8 @@ log:
   dnslog: true
 dns:
   servers:
-    - address: 'tcp+local://1.1.1.1:53'
-    - address: 'tcp+local://1.0.0.1:53'
+    - address: 'tcp+local://8.8.8.8:53'
+    - address: 'tcp+local://8.8.4.4:53'
 inbounds:
   - listen: 0.0.0.0
     port: 443
